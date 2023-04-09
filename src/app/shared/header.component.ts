@@ -5,10 +5,20 @@ import { RouterModule } from '@angular/router';
   selector: 'app-header',
   standalone: true,
   imports: [RouterModule],
-  template: `<nav class="d-flex flex-row">
-    <a class="ms-auto" href="/">Space Viewer</a>
-    <a [routerLink]="['/pictureOfDay']" routerLinkActive="active">Picutre of day</a>
-    <a [routerLink]="['/spacePictures']" routerLinkActive="active">Space Pictures</a>
+  template: `<nav class="navbar navbar-expand-lg bg-body">
+    <div class="container-fluid">
+      <a class="nav-brand" href="/">Space Viewer</a>
+      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav">
+          <a class="nav-link" [routerLink]="['/pictureOfDay']" routerLinkActive="active"
+            >Picutre of day</a
+          >
+          <a class="nav-link" [routerLink]="['/spacePictures']" routerLinkActive="active"
+            >Space Pictures</a
+          >
+        </div>
+      </div>
+    </div>
   </nav>`,
   styles: [
     `
