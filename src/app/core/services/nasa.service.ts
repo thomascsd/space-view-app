@@ -4,13 +4,14 @@ import { Observable } from 'rxjs';
 import { NasaPictureOfDay } from '../models/NasaPictureOfDay';
 import { NasaImage } from '../models/NasaImage';
 import { NasaAsset } from '../models/NasaAsset';
+import { environment } from 'src/environments/environment';
 
-const url = '';
+const url = environment.apiUrl;
 
 @Injectable({
   providedIn: 'root',
 })
-export class NasaServiceService {
+export class NasaService {
   constructor(private client: HttpClient) {}
 
   getPictureOfDay(): Observable<NasaPictureOfDay[]> {

@@ -1,7 +1,7 @@
 import { Component, ChangeDetectionStrategy, Input } from '@angular/core';
 
 @Component({
-  selector: '',
+  selector: 'app-picture-card',
   standalone: true,
   template: ` <div class="card" style="width: 18rem;">
     <img src="{{ imageSrc }}" class="card-img-top" alt="..." />
