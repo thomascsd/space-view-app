@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { NasaPictureOfDay } from '../models/NasaPictureOfDay';
-import { NasaImage } from '../models/NasaImage';
+import { NasaImage } from '../models/NasaImageItem';
 import { NasaAsset } from '../models/NasaAsset';
 import { environment } from 'src/environments/environment';
 

@@ -1,24 +1,29 @@
 import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { NasaService } from '../core/services/nasa.service';
-import { Observable } from 'rxjs';
-import { NasaPictureOfDay } from '../core/models/NasaPictureOfDay';
 import { PictureCardComponet } from '../shared/picture-card.component';
+import { NasaImageItem } from '../core/models/NasaImageItem';
 
 @Component({
   selector: 'app-space-pictures',
   standalone: true,
   imports: [CommonModule, PictureCardComponet],
-  template: `<div *ngFor="let pic of pictures">
-    <app-picture-card [imageSrc]="pic.hdurl" [description]="pic.explanation"></app-picture-card>
+  template: `<div class="d-flex flex-row flex-wrap justify-content-center">
+    <<ng-container *ngFor="let item of imageItems">
+      <app-picture-card
+        [imageSrc]="item.links[0].href"
+        [title]="item.data[0].title"
+        [description]="item.data[0].description"
+      ></app-picture-card>
+    </ng-container>
   </div>`,
 })
 export class SpacePicturesComponent implements OnInit {
   constructor(private nasaService: NasaService) {}
 
-  pictures: NasaPictureOfDay[] = [];
+  imageItems: NasaImageItem[] = [];
 
   ngOnInit(): void {
-    this.nasaService.getPictureOfDay().subscribe((pics) => (this.pictures = pics));
+    this.nasaService.getSpacePictures().subscribe((items) => (this.imageItems = items));
   }
 }
