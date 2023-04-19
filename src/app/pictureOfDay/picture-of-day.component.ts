@@ -1,19 +1,20 @@
+import { ReadMorePipe } from './../shared/pipes/read-more.pipe';
 import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { NasaService } from '../core/services/nasa.service';
 import { NasaPictureOfDay } from '../core/models/NasaPictureOfDay';
-import { PictureCardComponet } from '../shared/picture-card.component';
+import { PictureCardComponet } from '../shared/components/picture-card.component';
 
 @Component({
   selector: 'app-pic-of-day',
   standalone: true,
-  imports: [CommonModule, PictureCardComponet],
+  imports: [CommonModule, PictureCardComponet, ReadMorePipe],
   template: `<div class="d-flex flex-row flex-wrap justify-content-center">
     <<ng-container *ngFor="let pic of pictures">
       <app-picture-card
         [imageSrc]="pic.url"
         [title]="pic.title"
-        [description]="pic.explanation"
+        [description]="pic.explanation | readMore"
       ></app-picture-card>
     </ng-container>
   </div>`,
