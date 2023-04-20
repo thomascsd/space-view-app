@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { LayoutComponent } from './shared/layout.component';
+import { LayoutComponent } from './shared/components/layout.component';
 import { PictureOfDayComponent } from './pictureOfDay/picture-of-day.component';
 import { SpacePicturesComponent } from './space-pictures/space-pictures.component';
 
