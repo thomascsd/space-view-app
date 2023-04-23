@@ -1,7 +1,13 @@
-import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
+import { importProvidersFrom } from '@angular/core';
+import { AppComponent } from './app/app.component';
+import { NgxSmartModalModule } from 'ngx-smart-modal';
+import { BrowserModule, bootstrapApplication } from '@angular/platform-browser';
+import { provideHttpClient } from '@angular/common/http';
+import { AppRoutingModule } from './app/app-routing.module';
 
-import { AppModule } from './app/app.module';
-
-
-platformBrowserDynamic().bootstrapModule(AppModule)
-  .catch(err => console.error(err));
+bootstrapApplication(AppComponent, {
+  providers: [
+    importProvidersFrom(BrowserModule, AppRoutingModule, NgxSmartModalModule.forRoot()),
+    provideHttpClient(),
+  ],
+}).catch((err) => console.error(err));
