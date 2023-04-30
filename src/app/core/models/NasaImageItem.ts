@@ -20,13 +20,3 @@ export interface NasaImageItemLink {
   rel: string;
   render: string;
 }
-
-export interface NasaImageCollectionLink {
-  href: string;
-  prompt: string;
-  rel: string;
-}
-
-export interface NasaImageMetadata {
-  total_hits: number;
-}
