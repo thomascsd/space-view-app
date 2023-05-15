@@ -6,6 +6,7 @@ import { NasaService } from '../core/services/nasa.service';
 import { NasaPictureOfDay } from '../core/models/NasaPictureOfDay';
 import { PictureCardComponet } from '../shared/components/picture-card.component';
 import { ReadMorePipe } from './../shared/pipes/read-more.pipe';
+import { DialogComponent } from '../shared/components/dialog.component';
 
 @Component({
   selector: 'app-pic-of-day',
@@ -24,15 +25,20 @@ import { ReadMorePipe } from './../shared/pipes/read-more.pipe';
   styles: [],
 })
 export class PictureOfDayComponent implements OnInit {
-  constructor(private nasaService: NasaService, private dialogService: DialogService) {}
-
   pictures!: Signal<NasaPictureOfDay[]>;
 
-  ngOnInit(): void {
+  constructor(private nasaService: NasaService, private dialogService: DialogService) {
     this.pictures = toSignal(this.nasaService.getPictureOfDay(), { initialValue: [] });
   }
 
-  openModal(pic: NasaPictureOfDay) {}
+  ngOnInit(): void {}
 
-  loadPic() {}
+  openModal(pic: NasaPictureOfDay) {
+    this.dialogService.open(DialogComponent, {
+      data: {
+        title: pic.title,
+        url: pic.hdurl,
+      },
+    });
+  }
 }
