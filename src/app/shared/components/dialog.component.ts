@@ -10,7 +10,7 @@ import { DialogData } from '../../core/models/DialogData';
   template: `
     <div class="image-dialog-content">
       <h2>{{ title }}</h2>
-      <img src="{{ url }}" class="img-fluid rounded" alt="" />
+      <a [href]="url" target="_blank"><img src="{{ url }}" class="img-fluid rounded" alt="" /></a>
     </div>
   `,
   styles: [
