@@ -6,13 +6,31 @@ import { FooterComponent } from './footer.component';
 @Component({
   standalone: true,
   imports: [HeaderComponent, FooterComponent, RouterModule],
-  template: `<div class="d-flex flex-column">
+  template: `<div class="d-flex flex-column main">
     <app-header></app-header>
-    <main class="container-fluid flex-grow-1">
+    <main class="main-content content">
       <router-outlet></router-outlet>
     </main>
     <app-footer></app-footer>
   </div> `,
-  styles: [``],
+  styles: [
+    `
+      .main {
+        min-height: 100%;
+      }
+
+      .content {
+        flex: 1;
+        display: flex;
+        justify-content: center;
+        // flex-direction: column;
+      }
+
+      app-header,
+      app-footer {
+        height: 50px;
+      }
+    `,
+  ],
 })
 export class LayoutComponent {}
