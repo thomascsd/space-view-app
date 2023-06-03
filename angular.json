@@ -27,7 +27,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser-esbuild",
           "options": {
-            "outputPath": "dist/space-view-app",
+            "outputPath": "dist",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": ["zone.js"],
