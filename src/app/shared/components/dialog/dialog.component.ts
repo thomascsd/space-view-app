@@ -1,7 +1,7 @@
 import { ChangeDetectionStrategy, Component, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { DialogRef } from '@ngneat/dialog';
-import { DialogData } from '../../core/models/DialogData';
+import { DialogData } from '../../../core/models/DialogData';
 
 @Component({
   selector: 'app-dialog',

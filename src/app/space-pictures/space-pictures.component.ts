@@ -6,7 +6,7 @@ import { NasaService } from '../core/services/nasa.service';
 import { PictureCardComponet } from '../shared/components/picture-card.component';
 import { NasaImageItem } from '../core/models/NasaImageItem';
 import { ReadMorePipe } from '../shared/pipes/read-more.pipe';
-import { DialogComponent } from '../shared/components/dialog.component';
+import { DialogComponent } from '../shared/components/dialog/dialog.component';
 
 @Component({
   selector: 'app-space-pictures',

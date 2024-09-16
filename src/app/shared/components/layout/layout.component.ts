@@ -1,18 +1,12 @@
 import { Component } from '@angular/core';
 import { RouterModule } from '@angular/router';
-import { HeaderComponent } from './header.component';
-import { FooterComponent } from './footer.component';
+import { HeaderComponent } from '../header/header.component';
+import { FooterComponent } from '../footer/footer.component';
 
 @Component({
   standalone: true,
   imports: [HeaderComponent, FooterComponent, RouterModule],
-  template: `<div class="d-flex flex-column main">
-    <app-header></app-header>
-    <main class="main-content content">
-      <router-outlet></router-outlet>
-    </main>
-    <app-footer></app-footer>
-  </div> `,
+  templateUrl: './layout.component.html',
   styles: [
     `
       .main {
