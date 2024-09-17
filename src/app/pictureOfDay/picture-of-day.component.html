@@ -1,0 +1,10 @@
+<div class="d-flex flex-row flex-wrap justify-content-center">
+  <ng-container *ngFor="let pic of pictures()">
+    <app-picture-card
+      [imageSrc]="pic.url"
+      [title]="pic.title"
+      [description]="pic.explanation | readMore"
+      (click)="openModal(pic)"
+    ></app-picture-card>
+  </ng-container>
+</div>

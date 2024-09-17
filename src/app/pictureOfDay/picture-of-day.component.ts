@@ -4,7 +4,7 @@ import { CommonModule } from '@angular/common';
 import { DialogService } from '@ngneat/dialog';
 import { NasaService } from '../core/services/nasa.service';
 import { NasaPictureOfDay } from '../core/models/NasaPictureOfDay';
-import { PictureCardComponet } from '../shared/components/picture-card.component';
+import { PictureCardComponet } from '../shared/components/picture-card/picture-card.component';
 import { ReadMorePipe } from './../shared/pipes/read-more.pipe';
 import { DialogComponent } from '../shared/components/dialog/dialog.component';
 
@@ -12,16 +12,7 @@ import { DialogComponent } from '../shared/components/dialog/dialog.component';
   selector: 'app-pic-of-day',
   standalone: true,
   imports: [CommonModule, PictureCardComponet, ReadMorePipe],
-  template: `<div class="d-flex flex-row flex-wrap justify-content-center">
-    <ng-container *ngFor="let pic of pictures()">
-      <app-picture-card
-        [imageSrc]="pic.url"
-        [title]="pic.title"
-        [description]="pic.explanation | readMore"
-        (click)="openModal(pic)"
-      ></app-picture-card>
-    </ng-container>
-  </div> `,
+  templateUrl: './picture-of-day.component.html',
   styles: [],
 })
 export class PictureOfDayComponent implements OnInit {
