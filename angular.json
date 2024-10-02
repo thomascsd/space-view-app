@@ -74,10 +74,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "space-view-app:build:production"
+              "buildTarget": "space-view-app:build:production"
             },
             "development": {
-              "browserTarget": "space-view-app:build:development"
+              "buildTarget": "space-view-app:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -85,7 +85,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "space-view-app:build"
+            "buildTarget": "space-view-app:build"
           }
         },
         "test": {
