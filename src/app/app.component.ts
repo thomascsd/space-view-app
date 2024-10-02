@@ -1,6 +1,10 @@
 import { Component, AfterViewInit } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 
+declare class Pageable {
+  constructor(selector: string, options: any);
+}
+
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
