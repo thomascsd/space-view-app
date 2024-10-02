@@ -6,6 +6,18 @@ import { CommonModule } from '@angular/common';
   standalone: true,
   imports: [CommonModule],
   templateUrl: './home.component.html',
-  styles: [],
+  styles: [
+    `
+      .bg-hero {
+        background-image: url('/assets/bg.jpeg');
+        background-size: cover;
+        background-position: center;
+      }
+
+      .hero-title {
+        color: white;
+      }
+    `,
+  ],
 })
 export class HomeComponent {}

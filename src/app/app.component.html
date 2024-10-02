@@ -1,6 +1,10 @@
-<div id="container">
-  <div data-anchor="Page1"></div>
-  <div data-anchor="Page2">
-    <router-outlet></router-outlet>
+<div class="pg-wrapper">
+  <div id="container" class="pg-container">
+    <div data-anchor="Page1" class="pg-page pg-active">
+      <app-home></app-home>
+    </div>
+    <div data-anchor="Page2" class="pg-page">
+      <router-outlet></router-outlet>
+    </div>
   </div>
 </div>
