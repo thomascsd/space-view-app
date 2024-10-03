@@ -1,6 +1,8 @@
 import { Component, AfterViewInit } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { HomeComponent } from './home/home.component';
+import { PictureOfDayComponent } from './pictureOfDay/picture-of-day.component';
+import { SpacePicturesComponent } from './space-pictures/space-pictures.component';
 
 declare class Pageable {
   constructor(selector: string, options: any);
@@ -10,7 +12,7 @@ declare class Pageable {
   selector: 'app-root',
   templateUrl: './app.component.html',
   standalone: true,
-  imports: [RouterOutlet, HomeComponent],
+  imports: [RouterOutlet, HomeComponent, PictureOfDayComponent, SpacePicturesComponent],
 })
 export class AppComponent implements AfterViewInit {
   title = 'space-view-app';
