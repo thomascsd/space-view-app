@@ -1,10 +1,13 @@
-<div class="is-flex is-flex-direction-row is-flex-wrap-wrap is-justify-content-center">
-  <ng-container *ngFor="let item of imageItems()">
-    <app-picture-card
-      [imageSrc]="item.links[0].href"
-      [title]="item.data[0].title"
-      [description]="item.data[0].description | readMore"
-      (click)="openModal(item)"
-    ></app-picture-card>
-  </ng-container>
+<div class="container is-full-widescreen">
+  <div class="is-flex is-flex-direction-row is-flex-wrap-wrap is-justify-content-center">
+    @for (item of imageItems(); track $index) {
+      <app-picture-card
+        [imageSrc]="item.links[0].href"
+        [title]="item.data[0].title"
+        [description]="item.data[0].description | readMore"
+        (click)="openModal(item)"
+      >
+      </app-picture-card>
+    }
+  </div>
 </div>

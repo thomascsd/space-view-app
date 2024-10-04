@@ -1,10 +1,12 @@
-<div class="is-flex is-flex-direction-row is-flex-wrap-wrap is-justify-content-center">
-  <ng-container *ngFor="let pic of pictures()">
-    <app-picture-card
-      [imageSrc]="pic.url"
-      [title]="pic.title"
-      [description]="pic.explanation | readMore"
-      (click)="openModal(pic)"
-    ></app-picture-card>
-  </ng-container>
+<div class="container">
+  <div class="is-flex is-flex-direction-row is-flex-wrap-wrap is-justify-content-center">
+    @for (pic of pictures(); track $index) {
+      <app-picture-card
+        [imageSrc]="pic.url"
+        [title]="pic.title"
+        [description]="pic.explanation | readMore"
+        (click)="openModal(pic)"
+      ></app-picture-card>
+    }
+  </div>
 </div>
