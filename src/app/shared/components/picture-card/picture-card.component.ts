@@ -1,4 +1,4 @@
-import { Component, ChangeDetectionStrategy, Input } from '@angular/core';
+import { Component, ChangeDetectionStrategy, input } from '@angular/core';
 import { NgOptimizedImage } from '@angular/common';
 
 @Component({
@@ -28,7 +28,7 @@ import { NgOptimizedImage } from '@angular/common';
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class PictureCardComponet {
-  @Input() imageSrc = '';
-  @Input() title = '';
-  @Input() description = '';
+  imageSrc = input.required<string>();
+  title = input.required<string>();
+  description = input.required<string>();
 }

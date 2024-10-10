@@ -1,14 +1,21 @@
 <div class="card">
-  <img
-    [ngSrc]="imageSrc"
-    [width]="200"
-    [height]="100"
-    loading="lazy"
-    class="card-img-top"
-    alt="{{ title }}"
-  />
-  <div class="card-body">
-    <h2 class="card-title fs-4">{{ title }}</h2>
-    <p class="card-text fs-5">{{ description }}</p>
+  <div class="card-image">
+    <figure class="image is-4by3">
+      <img
+        [ngSrc]="imageSrc()"
+        [width]="200"
+        [height]="100"
+        loading="lazy"
+        class="card-img-top"
+        alt="{{ title() }}"
+      />
+    </figure>
+  </div>
+
+  <div class="card-content">
+    <p class="title is-4">{{ title() }}</p>
+    <!-- <div class="content">
+      {{ description() }}
+    </div> -->
   </div>
 </div>

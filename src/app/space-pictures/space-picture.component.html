@@ -1,13 +1,15 @@
-<div class="container is-full-widescreen">
-  <div class="is-flex is-flex-direction-row is-flex-wrap-wrap is-justify-content-center">
+<div class="container is-fluid">
+  <div class="columns is-multiline is-0 has-same-height">
     @for (item of imageItems(); track $index) {
-      <app-picture-card
-        [imageSrc]="item.links[0].href"
-        [title]="item.data[0].title"
-        [description]="item.data[0].description | readMore"
-        (click)="openModal(item)"
-      >
-      </app-picture-card>
+      <div class="column">
+        <app-picture-card
+          [imageSrc]="item.links[0].href"
+          [title]="item.data[0].title"
+          [description]="item.data[0].description | readMore"
+          (click)="openModal(item)"
+        >
+        </app-picture-card>
+      </div>
     }
   </div>
 </div>
