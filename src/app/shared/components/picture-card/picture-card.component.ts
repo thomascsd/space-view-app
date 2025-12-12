@@ -9,19 +9,52 @@ import { NgOptimizedImage } from '@angular/common';
   styles: [
     `
       .card {
-        width: 18rem;
-        margin: 1rem;
-        box-shadow: 0px 0px 5px #ccc;
-        transition: all 0.3s ease;
+        height: 100%;
+        background-color: var(--card-bg);
+        border-radius: 12px;
+        overflow: hidden;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+        transition:
+          transform 0.3s ease,
+          box-shadow 0.3s ease;
+        border: none;
+        display: flex;
+        flex-direction: column;
       }
 
       .card:hover {
-        box-shadow: 0px 0px 10px #aaa;
+        transform: translateY(-5px);
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
+      }
+
+      .card-image {
+        position: relative;
+        overflow: hidden;
       }
 
       .card-img-top {
-        height: 200px;
+        width: 100%;
+        height: 220px;
         object-fit: cover;
+        transition: transform 0.5s ease;
+      }
+
+      .card:hover .card-img-top {
+        transform: scale(1.05);
+      }
+
+      .card-content {
+        padding: 1.5rem;
+        flex-grow: 1;
+        background-color: var(--card-bg);
+      }
+
+      .title {
+        color: var(--text-light) !important;
+        font-size: 1.1rem;
+        font-weight: 500;
+        margin-bottom: 0;
+        line-height: 1.4;
       }
     `,
   ],
