@@ -46,4 +46,11 @@ import { CommonModule } from '@angular/common';
     `,
   ],
 })
-export class HomeComponent {}
+export class HomeComponent {
+  scrollToGallery() {
+    const element = document.getElementById('gallery');
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+  }
+}

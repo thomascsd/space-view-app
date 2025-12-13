@@ -1,7 +1,7 @@
 <div class="container is-fluid">
   <div class="columns is-multiline is-0 has-same-height">
     @for (item of imageItems(); track $index) {
-      <div class="column">
+      <div class="column is-3-desktop is-4-tablet is-12-mobile">
         <app-picture-card
           [imageSrc]="item.links[0].href"
           [title]="item.data[0].title"
