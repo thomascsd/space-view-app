@@ -1,19 +1,18 @@
 import { ChangeDetectionStrategy, Component, inject } from '@angular/core';
-
 import { DialogRef } from '@ngneat/dialog';
 import { DialogData } from '../../../core/models/DialogData';
 
 @Component({
-    selector: 'app-dialog',
-    imports: [],
-    template: `
+  selector: 'app-dialog',
+  imports: [],
+  template: `
     <div class="image-dialog-content">
       <h2>{{ title }}</h2>
       <a [href]="url" target="_blank"><img src="{{ url }}" class="img-fluid rounded" alt="" /></a>
     </div>
   `,
-    styles: [
-        `
+  styles: [
+    `
       .image-dialog-content {
         position: relative;
         background-color: #fefefe;
@@ -22,9 +21,12 @@ import { DialogData } from '../../../core/models/DialogData';
         width: 80%;
         max-width: 600px;
       }
+      h2 {
+        color: var(--text-dark);
+      }
     `,
-    ],
-    changeDetection: ChangeDetectionStrategy.OnPush
+  ],
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class DialogComponent {
   ref: DialogRef<DialogData, boolean> = inject(DialogRef);
