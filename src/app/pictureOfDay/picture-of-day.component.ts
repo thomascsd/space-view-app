@@ -9,11 +9,10 @@ import { ReadMorePipe } from './../shared/pipes/read-more.pipe';
 import { DialogComponent } from '../shared/components/dialog/dialog.component';
 
 @Component({
-  selector: 'app-pic-of-day',
-  standalone: true,
-  imports: [CommonModule, PictureCardComponet, ReadMorePipe],
-  templateUrl: './picture-of-day.component.html',
-  styles: [],
+    selector: 'app-pic-of-day',
+    imports: [CommonModule, PictureCardComponet, ReadMorePipe],
+    templateUrl: './picture-of-day.component.html',
+    styles: []
 })
 export class PictureOfDayComponent implements OnInit {
   pictures!: Signal<NasaPictureOfDay[]>;

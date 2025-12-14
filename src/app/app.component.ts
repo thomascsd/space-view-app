@@ -7,8 +7,7 @@ import { FooterComponent } from './shared/components/footer/footer.component';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  standalone: true,
-  imports: [HomeComponent, PictureOfDayComponent, SpacePicturesComponent, FooterComponent],
+  imports: [HomeComponent, SpacePicturesComponent, FooterComponent],
 })
 export class AppComponent implements AfterViewInit {
   title = 'space-view-app';

@@ -2,12 +2,11 @@ import { Component, ChangeDetectionStrategy, input } from '@angular/core';
 import { NgOptimizedImage } from '@angular/common';
 
 @Component({
-  selector: 'app-picture-card',
-  standalone: true,
-  imports: [NgOptimizedImage],
-  templateUrl: './picture-card.component.html',
-  styles: [
-    `
+    selector: 'app-picture-card',
+    imports: [NgOptimizedImage],
+    templateUrl: './picture-card.component.html',
+    styles: [
+        `
       .card {
         height: 100%;
         background-color: var(--card-bg);
@@ -57,8 +56,8 @@ import { NgOptimizedImage } from '@angular/common';
         line-height: 1.4;
       }
     `,
-  ],
-  changeDetection: ChangeDetectionStrategy.OnPush,
+    ],
+    changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class PictureCardComponet {
   imageSrc = input.required<string>();

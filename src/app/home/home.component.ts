@@ -2,12 +2,11 @@ import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 @Component({
-  selector: 'app-home',
-  standalone: true,
-  imports: [CommonModule],
-  templateUrl: './home.component.html',
-  styles: [
-    `
+    selector: 'app-home',
+    imports: [CommonModule],
+    templateUrl: './home.component.html',
+    styles: [
+        `
       .bg-hero {
         background-image: linear-gradient(rgba(27, 38, 59, 0.6), rgba(27, 38, 59, 0.8)),
           url('/assets/bg.jpeg');
@@ -44,7 +43,7 @@ import { CommonModule } from '@angular/common';
         box-shadow: 0 6px 8px rgba(0, 0, 0, 0.3);
       }
     `,
-  ],
+    ]
 })
 export class HomeComponent {
   scrollToGallery() {

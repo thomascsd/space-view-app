@@ -4,17 +4,16 @@ import { DialogRef } from '@ngneat/dialog';
 import { DialogData } from '../../../core/models/DialogData';
 
 @Component({
-  selector: 'app-dialog',
-  standalone: true,
-  imports: [CommonModule],
-  template: `
+    selector: 'app-dialog',
+    imports: [CommonModule],
+    template: `
     <div class="image-dialog-content">
       <h2>{{ title }}</h2>
       <a [href]="url" target="_blank"><img src="{{ url }}" class="img-fluid rounded" alt="" /></a>
     </div>
   `,
-  styles: [
-    `
+    styles: [
+        `
       .image-dialog-content {
         position: relative;
         background-color: #fefefe;
@@ -24,8 +23,8 @@ import { DialogData } from '../../../core/models/DialogData';
         max-width: 600px;
       }
     `,
-  ],
-  changeDetection: ChangeDetectionStrategy.OnPush,
+    ],
+    changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class DialogComponent {
   ref: DialogRef<DialogData, boolean> = inject(DialogRef);

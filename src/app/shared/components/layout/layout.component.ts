@@ -3,11 +3,10 @@ import { RouterModule } from '@angular/router';
 import { FooterComponent } from '../footer/footer.component';
 
 @Component({
-  standalone: true,
-  imports: [FooterComponent, RouterModule],
-  templateUrl: './layout.component.html',
-  styles: [
-    `
+    imports: [FooterComponent, RouterModule],
+    templateUrl: './layout.component.html',
+    styles: [
+        `
       .main {
         min-height: 100%;
       }
@@ -24,6 +23,6 @@ import { FooterComponent } from '../footer/footer.component';
         height: 50px;
       }
     `,
-  ],
+    ]
 })
 export class LayoutComponent {}

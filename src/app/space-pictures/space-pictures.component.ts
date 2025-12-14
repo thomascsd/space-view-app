@@ -9,10 +9,9 @@ import { ReadMorePipe } from '../shared/pipes/read-more.pipe';
 import { DialogComponent } from '../shared/components/dialog/dialog.component';
 
 @Component({
-  selector: 'app-space-pictures',
-  standalone: true,
-  imports: [CommonModule, PictureCardComponet, ReadMorePipe],
-  templateUrl: 'space-picture.component.html',
+    selector: 'app-space-pictures',
+    imports: [CommonModule, PictureCardComponet, ReadMorePipe],
+    templateUrl: 'space-picture.component.html'
 })
 export class SpacePicturesComponent implements OnInit {
   imageItems!: Signal<NasaImageItem[]>;
