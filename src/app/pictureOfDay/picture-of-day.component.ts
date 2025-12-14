@@ -1,6 +1,6 @@
 import { Component, OnInit, Signal, signal } from '@angular/core';
 import { toSignal } from '@angular/core/rxjs-interop';
-import { CommonModule } from '@angular/common';
+
 import { DialogService } from '@ngneat/dialog';
 import { NasaService } from '../core/services/nasa.service';
 import { NasaPictureOfDay } from '../core/models/NasaPictureOfDay';
@@ -10,7 +10,7 @@ import { DialogComponent } from '../shared/components/dialog/dialog.component';
 
 @Component({
     selector: 'app-pic-of-day',
-    imports: [CommonModule, PictureCardComponet, ReadMorePipe],
+    imports: [PictureCardComponet, ReadMorePipe],
     templateUrl: './picture-of-day.component.html',
     styles: []
 })

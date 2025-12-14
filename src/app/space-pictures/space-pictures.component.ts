@@ -1,7 +1,7 @@
 import { Component, OnInit, Signal } from '@angular/core';
 import { toSignal } from '@angular/core/rxjs-interop';
 import { DialogService } from '@ngneat/dialog';
-import { CommonModule } from '@angular/common';
+
 import { NasaService } from '../core/services/nasa.service';
 import { PictureCardComponet } from '../shared/components/picture-card/picture-card.component';
 import { NasaImageItem } from '../core/models/NasaImageItem';
@@ -10,7 +10,7 @@ import { DialogComponent } from '../shared/components/dialog/dialog.component';
 
 @Component({
     selector: 'app-space-pictures',
-    imports: [CommonModule, PictureCardComponet, ReadMorePipe],
+    imports: [PictureCardComponet, ReadMorePipe],
     templateUrl: 'space-picture.component.html'
 })
 export class SpacePicturesComponent implements OnInit {

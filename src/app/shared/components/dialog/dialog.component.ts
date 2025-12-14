@@ -1,11 +1,11 @@
 import { ChangeDetectionStrategy, Component, inject } from '@angular/core';
-import { CommonModule } from '@angular/common';
+
 import { DialogRef } from '@ngneat/dialog';
 import { DialogData } from '../../../core/models/DialogData';
 
 @Component({
     selector: 'app-dialog',
-    imports: [CommonModule],
+    imports: [],
     template: `
     <div class="image-dialog-content">
       <h2>{{ title }}</h2>
