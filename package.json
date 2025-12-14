@@ -6,7 +6,8 @@
     "start": "ng serve",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
-    "test": "ng test"
+    "test": "ng test",
+    "test:vitest": "vitest"
   },
   "prettier": {
     "singleQuote": true,
@@ -31,14 +32,10 @@
     "@angular/build": "^21.0.3",
     "@angular/cli": "~21.0.3",
     "@angular/compiler-cli": "^21.0.5",
-    "@types/jasmine": "~4.3.0",
-    "jasmine-core": "~4.5.0",
-    "karma": "~6.4.0",
-    "karma-chrome-launcher": "~3.1.0",
-    "karma-coverage": "~2.2.0",
-    "karma-jasmine": "~5.1.0",
-    "karma-jasmine-html-reporter": "~2.0.0",
+    "jsdom": "^27.3.0",
     "prettier": "^3.3.3",
-    "typescript": "~5.9.3"
+    "typescript": "~5.9.3",
+    "vite-tsconfig-paths": "^5.1.4",
+    "vitest": "^4.0.15"
   }
 }
