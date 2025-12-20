@@ -5,5 +5,9 @@ import { provideHttpClient } from '@angular/common/http';
 import { AppRoutingModule } from './app/app-routing.module';
 
 bootstrapApplication(AppComponent, {
-  providers: [provideZoneChangeDetection(),importProvidersFrom(BrowserModule, AppRoutingModule), provideHttpClient()],
+  providers: [
+    provideZoneChangeDetection(),
+    importProvidersFrom(BrowserModule, AppRoutingModule),
+    provideHttpClient(),
+  ],
 }).catch((err) => console.error(err));
